@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using System.ServiceModel;
 using System.Text;
 using Microsoft.Office.Interop.Word;
 using Microsoft.Office.Tools.Ribbon;
 using Ninject;
 using ServicesDefinitions.Interfaces;
-using TrusChain.Storage;
 using TrusChain_v2.Forms;
 
 namespace TrusChain_v2
@@ -16,8 +16,6 @@ namespace TrusChain_v2
     public partial class BCMenu : IDisposable
     {
         public Application application;
-
-        public IpfsWrapper IpfsWrapper = new IpfsWrapper().Init();
 
         private void BCMenu_Load(object sender, RibbonUIEventArgs e)
         {
@@ -77,25 +75,16 @@ namespace TrusChain_v2
             var actdoc = this.application.ActiveDocument.FullName;
 
             var plainFile = $"{this.application.ActiveDocument.FullName}";
-            var encrpFile = $"{this.application.ActiveDocument.FullName}.enc";
 
             this.application.ActiveDocument.Close();
 
-            using (RijndaelManaged myRijndael = new RijndaelManaged())
-            {
+            string address = "net.pipe://localhost/ShareFileService";
+ 
+            NetNamedPipeBinding binding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+            EndpointAddress ep = new EndpointAddress(address);
+            IServiceContract channel = ChannelFactory<IServiceContract>.CreateChannel(binding, ep);
 
-                myRijndael.GenerateKey();
-                myRijndael.GenerateIV();
-                // Encrypt the string to an array of bytes. 
-                byte[] encrypted = AESExample.AES.EncryptStringToBytes(File.ReadAllText(plainFile), myRijndael.Key, myRijndael.IV);
-
-                // Decrypt the bytes to a string. 
-                //string roundtrip = AESExample.AES.DecryptStringFromBytes(encrypted, myRijndael.Key, myRijndael.IV);
-
-                File.WriteAllBytes(encrpFile, encrypted);
-            }
-
-            var hashString = this.IpfsWrapper.Add(encrpFile).Result;
+            channel.ShareFile(plainFile, "pepito", "Marianico");
 
             this.application.Documents.Open(plainFile);
 
@@ -108,10 +97,6 @@ namespace TrusChain_v2
             {
                 w.Close();
             };
-
-            w.ShowDialog();
-
-            w.Answer = hashString;
         }
 
         public new void Dispose()

@@ -25,3 +25,8 @@ D:\repos\TrusChain-v2\TrusChain-v2\bin\Debug\Newtonsoft.Json.xml
 D:\repos\TrusChain-v2\TrusChain-v2\bin\Debug\BouncyCastle.Crypto.xml
 D:\repos\TrusChain-v2\TrusChain-v2\bin\Debug\Common.Logging.Core.pdb
 D:\repos\TrusChain-v2\TrusChain-v2\bin\Debug\Common.Logging.Core.xml
+D:\repos\TrusChain-v2\TrusChain-v2\obj\Debug\Forms\AskInfo.g.cs
+D:\repos\TrusChain-v2\TrusChain-v2\obj\Debug\TrusChain-v2_MarkupCompile.cache
+D:\repos\TrusChain-v2\TrusChain-v2\obj\Debug\TrusChain-v2_MarkupCompile.lref
+D:\repos\TrusChain-v2\TrusChain-v2\obj\Debug\Forms\AskInfo.baml
+D:\repos\TrusChain-v2\TrusChain-v2\obj\Debug\TrusChain-v2.g.resources

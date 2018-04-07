@@ -20,5 +20,15 @@ namespace IdentityService.KeyHandler
                 Address = account.Address
             };
         }
+
+        public KeyPair LoadFromPrivate(string privKey)
+        {
+            var ethEcKey = new Nethereum.Signer.EthECKey(privKey);
+            return new KeyPair()
+            {
+                Address = ethEcKey.GetPublicAddress(),
+                Private = ethEcKey.GetPrivateKey()
+            };
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.group2 = this.Factory.CreateRibbonGroup();
             this.comboBox2 = this.Factory.CreateRibbonComboBox();
             this.button2 = this.Factory.CreateRibbonButton();
+            this.ImportBtn = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.group2.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             this.group1.Items.Add(this.WalletCombo);
             this.group1.Items.Add(this.button1);
+            this.group1.Items.Add(this.ImportBtn);
             this.group1.Label = "Identity";
             this.group1.Name = "group1";
             // 
@@ -91,6 +93,12 @@
             this.button2.OfficeImageId = "FileSave";
             this.button2.ShowImage = true;
             // 
+            // ImportBtn
+            // 
+            this.ImportBtn.Label = "Import Id";
+            this.ImportBtn.Name = "ImportBtn";
+            this.ImportBtn.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ImportBtn_Click);
+            // 
             // BCMenu
             // 
             this.Name = "BCMenu";
@@ -116,6 +124,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonComboBox comboBox2;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button2;
         public Microsoft.Office.Tools.Ribbon.RibbonComboBox WalletCombo;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton ImportBtn;
     }
 
     partial class ThisRibbonCollection

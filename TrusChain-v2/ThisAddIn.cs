@@ -35,6 +35,7 @@ namespace TrusChain_v2
                 }
 
                 Menu.WalletCombo.Text = Menu.WalletCombo.Items.Last().Label;
+                Menu.application = this.Application;
             };
         }
 

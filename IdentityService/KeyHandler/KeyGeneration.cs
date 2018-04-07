@@ -33,10 +33,9 @@ namespace IdentityService.KeyHandler
             };
         }
 
-        public byte[] SignFile(string privKey, string filePath, string outPath)
+        public void SignFile(string privKey, string filePath, string outPath)
         {
             CSEncryptDecrypt.CSEncryptDecrypt.EncryptFile(filePath, outPath, privKey);
-            enc.
         }
     }
 }

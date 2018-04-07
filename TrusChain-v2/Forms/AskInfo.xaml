@@ -8,9 +8,9 @@
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label Content="{Binding Question}" Margin="10,10,10,0" VerticalAlignment="Top" Height="56"/>
+        <Label Content="{Binding Question, Mode=TwoWay}" Margin="10,10,10,0" x:FieldModifier="public" x:Name="Label" VerticalAlignment="Top" Height="56"/>
         <Separator Height="10" Margin="0,68,0,0" VerticalAlignment="Top"/>
-        <TextBox Margin="10,83,10.2,50.8" TextWrapping="Wrap" Text="{Binding Answer}"/>
+        <TextBox Margin="10,83,10.2,50.8" TextWrapping="Wrap"  x:FieldModifier="public" x:Name="fieldans" Text="{Binding Answer, Mode=TwoWay}"/>
         <Separator Margin="0,0,0.2,34.8" Height="11" VerticalAlignment="Bottom"/>
         <Button Content="Ok" Margin="0,0,90.2,9.8" x:Name="BtOk" x:FieldModifier="public" HorizontalAlignment="Right" Width="75" Height="20" VerticalAlignment="Bottom"/>
         <Button Content="Cancel" Margin="0,0,10.2,9.8" x:Name="BtCancel" x:FieldModifier="public" Click="BtCancel_Click" HorizontalAlignment="Right" Width="75" Height="20" VerticalAlignment="Bottom"/>

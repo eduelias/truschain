@@ -27,10 +27,11 @@
     <RootNamespace>TrusChain_v2</RootNamespace>
     <AssemblyName>TrusChain-v2</AssemblyName>
     <LoadBehavior>3</LoadBehavior>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
@@ -186,6 +187,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -195,6 +197,7 @@
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
@@ -209,6 +212,10 @@
     <None Include="TrusChain-v2_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\VaultChain\TrusChain\TrustChain.Storage\TrustChain.Storage.csproj">
+      <Project>{08b31290-75ee-4f70-b434-69c10e8f6758}</Project>
+      <Name>TrustChain.Storage</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IdentityService\IdentityService.csproj">
       <Project>{AA3091BB-B2A6-40BC-8ECE-00956777D1DE}</Project>
       <Name>IdentityService</Name>

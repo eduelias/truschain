@@ -38,10 +38,10 @@
             this.group1 = this.Factory.CreateRibbonGroup();
             this.WalletCombo = this.Factory.CreateRibbonComboBox();
             this.button1 = this.Factory.CreateRibbonButton();
+            this.ImportBtn = this.Factory.CreateRibbonButton();
             this.group2 = this.Factory.CreateRibbonGroup();
             this.comboBox2 = this.Factory.CreateRibbonComboBox();
             this.button2 = this.Factory.CreateRibbonButton();
-            this.ImportBtn = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.group2.SuspendLayout();
@@ -67,12 +67,19 @@
             // 
             this.WalletCombo.Label = "Indentity";
             this.WalletCombo.Name = "WalletCombo";
+            this.WalletCombo.Text = null;
             // 
             // button1
             // 
             this.button1.Label = "Add Identity";
             this.button1.Name = "button1";
             this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
+            // 
+            // ImportBtn
+            // 
+            this.ImportBtn.Label = "Import Id";
+            this.ImportBtn.Name = "ImportBtn";
+            this.ImportBtn.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ImportBtn_Click);
             // 
             // group2
             // 
@@ -85,6 +92,7 @@
             // 
             this.comboBox2.Label = "Matter";
             this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Text = null;
             // 
             // button2
             // 
@@ -92,12 +100,7 @@
             this.button2.Name = "button2";
             this.button2.OfficeImageId = "FileSave";
             this.button2.ShowImage = true;
-            // 
-            // ImportBtn
-            // 
-            this.ImportBtn.Label = "Import Id";
-            this.ImportBtn.Name = "ImportBtn";
-            this.ImportBtn.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ImportBtn_Click);
+            this.button2.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button2_Click);
             // 
             // BCMenu
             // 

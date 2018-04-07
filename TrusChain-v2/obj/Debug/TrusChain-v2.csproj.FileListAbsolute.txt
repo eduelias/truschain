@@ -30,3 +30,8 @@ D:\repos\TrusChain-v2\TrusChain-v2\obj\Debug\TrusChain-v2_MarkupCompile.cache
 D:\repos\TrusChain-v2\TrusChain-v2\obj\Debug\TrusChain-v2_MarkupCompile.lref
 D:\repos\TrusChain-v2\TrusChain-v2\obj\Debug\Forms\AskInfo.baml
 D:\repos\TrusChain-v2\TrusChain-v2\obj\Debug\TrusChain-v2.g.resources
+D:\repos\TrusChain-v2\TrusChain-v2\bin\Debug\ipfs_daemon.exe
+D:\repos\TrusChain-v2\TrusChain-v2\bin\Debug\TrustChain.Storage.dll
+D:\repos\TrusChain-v2\TrusChain-v2\bin\Debug\Ipfs.dll
+D:\repos\TrusChain-v2\TrusChain-v2\bin\Debug\TrustChain.Storage.pdb
+D:\repos\TrusChain-v2\TrusChain-v2\bin\Debug\TrustChain.Storage.dll.config

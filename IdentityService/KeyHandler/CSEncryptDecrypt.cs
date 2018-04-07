@@ -7,8 +7,11 @@ using System.Text;
 
 namespace CSEncryptDecrypt
 {
-    class CSEncryptDecrypt
+    public class CSEncryptDecrypt
     {
+        // Go encrypting using AES then encrypt the AES key using ECC
+
+
         //  Call this function to remove the key from memory after use for security
         [System.Runtime.InteropServices.DllImport("KERNEL32.DLL", EntryPoint = "RtlZeroMemory")]
         public static extern bool ZeroMemory(IntPtr Destination, int Length);
@@ -29,7 +32,7 @@ namespace CSEncryptDecrypt
         {
             FileStream fsInput = new FileStream(sInputFilename,
                FileMode.Open,
-               FileAccess.Read);
+                FileAccess.Read);
 
             FileStream fsEncrypted = new FileStream(sOutputFilename,
                FileMode.Create,

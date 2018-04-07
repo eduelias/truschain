@@ -1,4 +1,5 @@
-﻿using Nethereum.Hex.HexConvertors.Extensions;
+﻿using System.Security.Cryptography;
+using Nethereum.Hex.HexConvertors.Extensions;
 using Nethereum.Signer;
 using Nethereum.Web3.Accounts;
 using ServicesDefinitions.Interfaces;
@@ -24,11 +25,18 @@ namespace IdentityService.KeyHandler
         public KeyPair LoadFromPrivate(string privKey)
         {
             var ethEcKey = new Nethereum.Signer.EthECKey(privKey);
+
             return new KeyPair()
             {
                 Address = ethEcKey.GetPublicAddress(),
                 Private = ethEcKey.GetPrivateKey()
             };
+        }
+
+        public byte[] SignFile(string privKey, string filePath, string outPath)
+        {
+            CSEncryptDecrypt.CSEncryptDecrypt.EncryptFile(filePath, outPath, privKey);
+            enc.
         }
     }
 }

@@ -36,7 +36,7 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.comboBox1 = this.Factory.CreateRibbonComboBox();
+            this.WalletCombo = this.Factory.CreateRibbonComboBox();
             this.button1 = this.Factory.CreateRibbonButton();
             this.group2 = this.Factory.CreateRibbonGroup();
             this.comboBox2 = this.Factory.CreateRibbonComboBox();
@@ -56,20 +56,21 @@
             // 
             // group1
             // 
-            this.group1.Items.Add(this.comboBox1);
+            this.group1.Items.Add(this.WalletCombo);
             this.group1.Items.Add(this.button1);
             this.group1.Label = "Identity";
             this.group1.Name = "group1";
             // 
-            // comboBox1
+            // WalletCombo
             // 
-            this.comboBox1.Label = "Indentity";
-            this.comboBox1.Name = "comboBox1";
+            this.WalletCombo.Label = "Indentity";
+            this.WalletCombo.Name = "WalletCombo";
             // 
             // button1
             // 
             this.button1.Label = "Add Identity";
             this.button1.Name = "button1";
+            this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
             // 
             // group2
             // 
@@ -110,11 +111,11 @@
 
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
-        internal Microsoft.Office.Tools.Ribbon.RibbonComboBox comboBox1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
         internal Microsoft.Office.Tools.Ribbon.RibbonComboBox comboBox2;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button2;
+        public Microsoft.Office.Tools.Ribbon.RibbonComboBox WalletCombo;
     }
 
     partial class ThisRibbonCollection

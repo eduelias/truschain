@@ -100,6 +100,9 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -177,6 +180,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -196,6 +200,16 @@
     </Compile>
     <AppDesigner Include="Properties\" />
     <None Include="TrusChain-v2_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityService\IdentityService.csproj">
+      <Project>{AA3091BB-B2A6-40BC-8ECE-00956777D1DE}</Project>
+      <Name>IdentityService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServicesDefinitions\ServicesDefinitions.csproj">
+      <Project>{8BF164B3-2FAE-486D-B96E-3BCB58134EE3}</Project>
+      <Name>ServicesDefinitions</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

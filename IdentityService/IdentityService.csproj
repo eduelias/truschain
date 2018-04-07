@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileHandler\FileContract.cs" />
     <Compile Include="KeyHandler\AESExample.cs" />
     <Compile Include="KeyHandler\CSEncryptDecrypt.cs" />
     <Compile Include="KeyHandler\KeyGeneration.cs" />

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesDefinitions", "Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustChain.Storage", "..\VaultChain\TrusChain\TrustChain.Storage\TrustChain.Storage.csproj", "{08B31290-75EE-4F70-B434-69C10E8F6758}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingConsole", "TestingConsole\TestingConsole.csproj", "{B548247A-E302-4BD9-BB03-78F13AA70393}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,22 @@ Global
 		{08B31290-75EE-4F70-B434-69C10E8F6758}.Release|x64.Build.0 = Release|Any CPU
 		{08B31290-75EE-4F70-B434-69C10E8F6758}.Release|x86.ActiveCfg = Release|Any CPU
 		{08B31290-75EE-4F70-B434-69C10E8F6758}.Release|x86.Build.0 = Release|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Debug|x64.Build.0 = Debug|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Debug|x86.Build.0 = Debug|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Release|ARM.Build.0 = Release|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Release|x64.ActiveCfg = Release|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Release|x64.Build.0 = Release|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Release|x86.ActiveCfg = Release|Any CPU
+		{B548247A-E302-4BD9-BB03-78F13AA70393}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
